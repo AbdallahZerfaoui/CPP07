@@ -30,4 +30,7 @@ class Array
         ~Array();
 };
 
+template <typename T>
+void printArray(const Array<T>& arr, const std::string& label);
+
 #include "Array.tpp"
