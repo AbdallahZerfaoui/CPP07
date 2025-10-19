@@ -7,11 +7,11 @@ template <typename T>
 Array<T>::Array(size_t n)
 {
     _array = new T[n]();
-    _size = n;  
+    _size = n;
 }
 
 template <typename T>
-Array<T>::Array(const Array& other)
+Array<T>::Array(const Array &other)
 {
     _size = other._size;
     _array = new T[_size];
@@ -22,7 +22,7 @@ Array<T>::Array(const Array& other)
 }
 
 template <typename T>
-Array<T>& Array<T>::operator=(const Array& other)
+Array<T> &Array<T>::operator=(const Array &other)
 {
     if (this != &other)
     {
@@ -38,7 +38,7 @@ Array<T>& Array<T>::operator=(const Array& other)
 }
 
 template <typename T>
-T& Array<T>::operator[](size_t index)
+T &Array<T>::operator[](size_t index)
 {
     if (index >= _size)
     {
@@ -48,7 +48,7 @@ T& Array<T>::operator[](size_t index)
 }
 
 template <typename T>
-const T& Array<T>::operator[](size_t index) const
+const T &Array<T>::operator[](size_t index) const
 {
     if (index >= _size)
     {
@@ -69,10 +69,9 @@ Array<T>::~Array()
     delete[] _array;
 }
 
-
 // ====== Print Array function ======
 template <typename T>
-void printArray(const Array<T>& arr, const std::string& label)
+void printArray(const Array<T> &arr, const std::string &label)
 {
     std::cout << "Contents of " << label << " (size: " << arr.size() << "): ";
     for (size_t i = 0; i < arr.size(); i++)

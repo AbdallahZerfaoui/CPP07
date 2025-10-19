@@ -14,15 +14,12 @@
 template <typename T, typename F>
 void iter(T *array, size_t len, F f);
 
-// template <typename T, typename F>
-// void iter(const T *array, size_t len, F f);
-
 template <typename T>
 void printElement(T elem);
 
 template <typename T>
 void increment(T &elem);
 
-void increment(std::string& s);
+void increment(std::string &s);
 
 #include "ex01.tpp"

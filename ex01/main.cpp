@@ -1,11 +1,5 @@
 #include "ex01.hpp"
 
-
-// inline void increment(std::string& s) {
-//     s.push_back('!');
-// }
-
-
 int main(void)
 {
     int a[] = {1, 2, 3, 4, 5};
@@ -37,7 +31,7 @@ int main(void)
     std::cout << MAGENTA << "\nString array:" << std::endl;
     ::iter(d, 3, printElement<std::string>);
     std::cout << "\nAdding exclamation mark..." << std::endl;
-    ::iter(d, 3, static_cast<void(*)(std::string&)>(increment)); // pick void increment(std::string&)
+    ::iter(d, 3, static_cast<void (*)(std::string &)>(increment)); // pick void increment(std::string&)
     ::iter(d, 3, printElement<std::string>);
     std::cout << RESET << std::endl;
 
