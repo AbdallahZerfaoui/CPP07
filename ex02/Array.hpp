@@ -11,6 +11,8 @@
 #define YELLOW "\033[33m"
 #define RESET "\033[0m"
 
+#define PI 22/7.0
+
 
 template <typename T>
 class Array

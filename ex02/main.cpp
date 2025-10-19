@@ -2,11 +2,9 @@
 
 
 
-
 int main(void)
 {
-  std::cout << WHITE << "=== Testing Array Template Class ===" << RESET
-            << std::endl;
+  std::cout << WHITE << "=== Testing Array Template Class ===" << RESET << std::endl;
 
   try
   {
@@ -33,7 +31,7 @@ int main(void)
     Array<double> doubleArray(4);
     for (size_t i = 0; i < doubleArray.size(); i++)
     {
-      doubleArray[i] = (i + 1) * 22/7.0;
+      doubleArray[i] = (i + 1) * PI;
     }
     printArray(doubleArray, "Double array");
 
@@ -54,7 +52,7 @@ int main(void)
     printArray(copiedArray, "Copied array");
 
     // Modify original to test deep copy
-    intArray[0] = 999;
+    intArray[0] = 6969;
     printArray(intArray, "Original after modification");
     printArray(copiedArray, "Copy after original modification");
 
